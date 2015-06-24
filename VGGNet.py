@@ -67,6 +67,7 @@ class VGGNet(FunctionSet):
         h = F.dropout(F.relu(self.fc6(h)), train=train, ratio=0.5)
         h = F.dropout(F.relu(self.fc7(h)), train=train, ratio=0.5)
         h = self.fc8(h)
+        h = F.softmax(h)
 
         if train:
             return F.softmax_cross_entropy(h, t), F.accuracy(h, t), h

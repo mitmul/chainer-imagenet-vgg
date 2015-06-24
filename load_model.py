@@ -9,8 +9,10 @@ from chainer import cuda
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str)
-    parser.add_argument('--prototxt', type=str)
+    parser.add_argument('--model', type=str,
+                        default='data/VGG_ILSVRC_16_layers.caffemodel')
+    parser.add_argument('--prototxt', type=str,
+                        default='data/VGG_ILSVRC_16_layers_deploy.prototxt')
     args = parser.parse_args()
 
     vgg = VGGNet()

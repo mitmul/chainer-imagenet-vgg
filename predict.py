@@ -14,10 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('--image', type=str, default='images/cat.jpg')
     args = parser.parse_args()
 
-    mean = np.load('data/ilsvrc_2012_mean.npy')
-    if mean.shape[1:] != (1, 1):
-        mean = mean.mean(1).mean(1)
-
+    mean = np.array([103.939, 116.779, 123.68])
     img = cv.imread(args.image).astype(np.float32)
     img -= mean
     img = cv.resize(img, (224, 224)).transpose((2, 0, 1))
@@ -40,9 +37,7 @@ if __name__ == '__main__':
     words = [(w[0], ' '.join(w[1:])) for w in [w.split() for w in words]]
     words = np.asarray(words)
 
-    top = words[np.argmax(pred)]
     top5 = np.argsort(pred)[0][::-1][:5]
-    print 'top:', top
-    print 'top5:'
-    for w in words[top5]:
-        print w
+    probs = np.sort(pred)[0][::-1][:5]
+    for w, p in zip(words[top5], probs):
+        print('{}\tprobability:{}'.format(w, p))

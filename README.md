@@ -27,11 +27,11 @@ $ python predict.py
 It may produce the below outputs:
 
 ```
-['n02123045' 'tabby, tabby cat']	probability:0.386542588472
-['n02123159' 'tiger cat']	probability:0.273922026157
-['n02124075' 'Egyptian cat']	probability:0.0958372727036
-['n01877812' 'wallaby, brush kangaroo']	probability:0.0283357128501
-['n03223299' 'doormat, welcome mat']	probability:0.0214200373739
+['n02124075' 'Egyptian cat']	probability:0.737295150757
+['n02123045' 'tabby, tabby cat']	probability:0.17518492043
+['n02123159' 'tiger cat']	probability:0.0533684939146
+['n02127052' 'lynx, catamount']	probability:0.005824980326
+['n04074963' 'remote control, remote']	probability:0.00200812658295
 ```
 
 ## Create chainermodel from caffemodel

@@ -39,7 +39,7 @@ It may produce the below outputs:
 ### Download files
 
 ```
-$ bash donwload.sh
+$ bash download_caffemodel.sh
 ```
 
 ### Load caffemodel and save it as chainermodel

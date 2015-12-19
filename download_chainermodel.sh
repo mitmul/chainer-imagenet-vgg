@@ -15,4 +15,4 @@ wget http://www.customs.go.jp/mizugiwa/maken/k9img13_golden.jpg -O dog.jpg
 wget http://meoowzresq.org/wp-content/uploads/2013/01/Tabby-M.jpg -O cat.jpg
 cd ..
 
-wget https://www.dropbox.com/s/4zpzfo9ulqi8138/VGGNet.chainermodel?dl=0 -O VGGNet.chainermodel
+wget https://www.dropbox.com/s/oubwxgmqzep24yq/VGG.model?dl=0 -O VGG.model
